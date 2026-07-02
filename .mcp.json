@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "Personal Website": {
+      "type": "http",
+      "url": "https://mcp.unframer.co/mcp?id=ae8b10f7cf5d321d0baced3896736b9b84351567f2219224987af57314a1a2c0&secret=QHZ9AtNWwLt5Z8tnnrxp5GR3q5Nfa7Uw"
+    }
+  }
+}
