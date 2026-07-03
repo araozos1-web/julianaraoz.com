@@ -9,18 +9,18 @@ const EMAIL = "mailto:jaraoz@mit.edu"
 
 const CARDS = {
   en: [
-    { name: "L'Oréal × Mercado Libre", img: "/mercadolibre.jpg", obj: "obj-c",  tag: "Ecosystem Build",      text: "#1 CPG partner by GMV. 11 brands activated. First co-investment model of this scale in LatAm." },
-    { name: "DiDi × OxxoGas",          img: "/didi-mic.jpg",     obj: "obj-c",  tag: "Alliance Architecture", text: "Zero platform cost. Thousands of stations integrated. Driver retention moat vs. Uber." },
-    { name: "TikTok × Mercado Libre",  img: "/tiktok.jpg",       obj: "obj-c",  tag: "B2B GTM",               text: "First commerce integration in LatAm. TikTok for Business flagship case. 2.5x ROAS." },
-    { name: "MyCreators.io",           img: "/mycreators.jpg",   obj: "obj-top", tag: "0→1 Program",          text: "Payments infrastructure and partner ecosystem for LatAm creators, zero agency friction." },
-    { name: "Crehana",                 img: "/crehana.jpg",      obj: "obj-c",  tag: "Partner Retention",     text: "B2B partnerships and behavioral design turned into scalable retention programs." },
+    { name: "L'Oréal × Mercado Libre", img: "/mercadolibre.jpg", obj: "obj-c",  tag: "Enterprise Partnerships",        stat: "11 brands, #1 CPG partner", text: "One relationship scaled into eleven brands across three divisions." },
+    { name: "DiDi × OxxoGas",          img: "/didi-mic.jpg",     obj: "obj-c",  tag: "Head of Loyalty",                stat: "Thousands of stations",     text: "Co-investment model that built a retention moat vs. Uber." },
+    { name: "TikTok × Mercado Libre",  img: "/tiktok.jpg",       obj: "obj-c",  tag: "Strategic Partnerships",         stat: "TikTok's flagship case",    text: "First commerce integration between TikTok and Mercado Libre." },
+    { name: "MyCreators.io",           img: "/mycreators.jpg",   obj: "obj-top", tag: "Co-Founder",                    stat: "Zero agency friction",      text: "Payments infrastructure solving cross-border liquidity for LatAm creators." },
+    { name: "Crehana",                 img: "/crehana.jpg",      obj: "obj-c",  tag: "Content Creator & Professor",    stat: "Taught it, then built it",  text: "Loyalty frameworks taught to thousands — later executed at DiDi." },
   ],
   es: [
-    { name: "L'Oréal × Mercado Libre", img: "/mercadolibre.jpg", obj: "obj-c",  tag: "Ecosistema",          text: "#1 partner CPG por GMV. 11 marcas activadas. Primer modelo de co-inversión de esta escala en LATAM." },
-    { name: "DiDi × OxxoGas",          img: "/didi-mic.jpg",     obj: "obj-c",  tag: "Alianza Estratégica", text: "Cero costo de plataforma. Miles de estaciones integradas. Ventaja de retención vs. Uber." },
-    { name: "TikTok × Mercado Libre",  img: "/tiktok.jpg",       obj: "obj-c",  tag: "GTM B2B",             text: "Primera integración de comercio en LATAM. Caso insignia de TikTok for Business. 2.5x ROAS." },
-    { name: "MyCreators.io",           img: "/mycreators.jpg",   obj: "obj-top", tag: "Programa 0→1",        text: "Infraestructura de pagos y ecosistema de partners para creadores LATAM, sin fricción de agencia." },
-    { name: "Crehana",                 img: "/crehana.jpg",      obj: "obj-c",  tag: "Retención de Partners", text: "Partnerships B2B y diseño conductual convertidos en programas de retención escalables." },
+    { name: "L'Oréal × Mercado Libre", img: "/mercadolibre.jpg", obj: "obj-c",  tag: "Partnerships Empresariales",     stat: "11 marcas, #1 partner CPG", text: "Una relación escalada a once marcas en tres divisiones." },
+    { name: "DiDi × OxxoGas",          img: "/didi-mic.jpg",     obj: "obj-c",  tag: "Head of Loyalty",                stat: "Miles de estaciones",       text: "Modelo de co-inversión que construyó una ventaja de retención vs. Uber." },
+    { name: "TikTok × Mercado Libre",  img: "/tiktok.jpg",       obj: "obj-c",  tag: "Strategic Partnerships",         stat: "Caso insignia de TikTok",   text: "Primera integración de comercio entre TikTok y Mercado Libre." },
+    { name: "MyCreators.io",           img: "/mycreators.jpg",   obj: "obj-top", tag: "Co-Founder",                    stat: "Cero fricción de agencia",  text: "Infraestructura de pagos que resuelve liquidez cross-border para creadores LatAm." },
+    { name: "Crehana",                 img: "/crehana.jpg",      obj: "obj-c",  tag: "Content Creator & Professor",    stat: "Lo enseñé, después lo construí", text: "Frameworks de loyalty enseñados a miles — después ejecutados en DiDi." },
   ],
 }
 
@@ -301,11 +301,15 @@ export default function Portfolio() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/88 via-black/10 to-transparent" />
               <div className="absolute bottom-5 left-5 right-5">
                 <span className="font-mono text-[9px] uppercase tracking-[0.18em]" style={{ color: "#10B981" }}>{c.tag}</span>
-                <h3 className="font-display font-semibold text-white mt-2"
-                    style={{ fontSize: "clamp(1rem,1.7vw,1.25rem)", lineHeight: 1.15, letterSpacing: "-0.02em" }}>
+                <h3 className="font-display font-semibold text-white/70 mt-2"
+                    style={{ fontSize: "clamp(0.8rem,1.1vw,0.9rem)", lineHeight: 1.15, letterSpacing: "-0.01em" }}>
                   {c.name}
                 </h3>
-                <p className="font-sans text-white/50 mt-1.5 leading-relaxed" style={{ fontSize: "clamp(0.75rem,0.85vw,0.82rem)" }}>
+                <p className="font-display font-bold text-white mt-1"
+                   style={{ fontSize: "clamp(1.15rem,2vw,1.5rem)", lineHeight: 1.1, letterSpacing: "-0.02em" }}>
+                  {c.stat}
+                </p>
+                <p className="font-sans text-white/50 mt-2 leading-relaxed" style={{ fontSize: "clamp(0.75rem,0.85vw,0.82rem)" }}>
                   {c.text}
                 </p>
               </div>
