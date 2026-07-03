@@ -10,14 +10,14 @@ const CARDS = {
   en: [
     { name: "L'Oréal × Mercado Libre", img: "/mercadolibre.jpg", obj: "obj-c",  tag: "Ecosystem Build",      text: "#1 CPG partner by GMV. 11 brands activated. First co-investment model of this scale in LatAm." },
     { name: "DiDi × OxxoGas",          img: "/didi-mic.jpg",     obj: "obj-c",  tag: "Alliance Architecture", text: "Zero platform cost. Thousands of stations integrated. Driver retention moat vs. Uber." },
-    { name: "TikTok × Mercado Livre",  img: "/tiktok.jpg",       obj: "obj-c",  tag: "B2B GTM",               text: "First commerce integration in LatAm. TikTok for Business flagship case. 2.5x ROAS." },
+    { name: "TikTok × Mercado Libre",  img: "/tiktok.jpg",       obj: "obj-c",  tag: "B2B GTM",               text: "First commerce integration in LatAm. TikTok for Business flagship case. 2.5x ROAS." },
     { name: "MyCreators.io",           img: "/mycreators.jpg",   obj: "obj-top", tag: "0→1 Program",          text: "Payments infrastructure and partner ecosystem for LatAm creators, zero agency friction." },
     { name: "Crehana",                 img: "/crehana.jpg",      obj: "obj-c",  tag: "Partner Retention",     text: "B2B partnerships and behavioral design turned into scalable retention programs." },
   ],
   es: [
     { name: "L'Oréal × Mercado Libre", img: "/mercadolibre.jpg", obj: "obj-c",  tag: "Ecosistema",          text: "#1 partner CPG por GMV. 11 marcas activadas. Primer modelo de co-inversión de esta escala en LATAM." },
     { name: "DiDi × OxxoGas",          img: "/didi-mic.jpg",     obj: "obj-c",  tag: "Alianza Estratégica", text: "Cero costo de plataforma. Miles de estaciones integradas. Ventaja de retención vs. Uber." },
-    { name: "TikTok × Mercado Livre",  img: "/tiktok.jpg",       obj: "obj-c",  tag: "GTM B2B",             text: "Primera integración de comercio en LATAM. Caso insignia de TikTok for Business. 2.5x ROAS." },
+    { name: "TikTok × Mercado Libre",  img: "/tiktok.jpg",       obj: "obj-c",  tag: "GTM B2B",             text: "Primera integración de comercio en LATAM. Caso insignia de TikTok for Business. 2.5x ROAS." },
     { name: "MyCreators.io",           img: "/mycreators.jpg",   obj: "obj-top", tag: "Programa 0→1",        text: "Infraestructura de pagos y ecosistema de partners para creadores LATAM, sin fricción de agencia." },
     { name: "Crehana",                 img: "/crehana.jpg",      obj: "obj-c",  tag: "Retención de Partners", text: "Partnerships B2B y diseño conductual convertidos en programas de retención escalables." },
   ],
@@ -57,11 +57,14 @@ const FAQ_ITEMS = {
 
 const T = {
   en: {
-    heroHeadline:   "I build growth engines and commercial operations that scale without friction.",
+    heroHeadline:   "I build growth engines and commercial operations.",
     heroCta:        "Work with me →",
     heroSubtitle:   "Advisor & Fractional Tech Operator.",
     heroTagline:    "Helping global businesses expand into LatAm, and traditional companies become AI-driven.",
     workedWith:     "Built and operated inside",
+    aboutLabel:     "// About",
+    aboutTitle:     <>A decade inside hypergrowth.<br />A life between cultures.</>,
+    aboutBody:      "I've spent 10+ years building growth and commercial operations inside TikTok, DiDi, and Mercado Libre — companies that scaled across languages, currencies, and regulatory systems most playbooks never touch. Add a life split between the U.S. and Latin America, and the result is a rare read on how global businesses actually expand. Now I bring that same operating experience directly to companies ready to scale the right way — not with theory, but with the frameworks and systems that worked inside hypergrowth.",
     sprintLabel:    "// How I work with you",
     sprintTitle:    <>How I work<br />with you.</>,
     s1label:        "// AI Transformation",   s1title: "AI Business Transformation",
@@ -90,11 +93,14 @@ const T = {
     footerCopy:     "Julian Araoz © 2026 · Boston · Mexico City",
   },
   es: {
-    heroHeadline:   "Construyo motores de crecimiento y operaciones que escalan sin fricción.",
+    heroHeadline:   "Construyo motores de crecimiento y operaciones.",
     heroCta:        "Hablemos →",
     heroSubtitle:   "Asesor & Operador Tech Fraccional.",
     heroTagline:    "Ayudo a empresas globales a expandirse en LatAm, y a empresas tradicionales a operar con IA.",
     workedWith:     "Construido y operado dentro de",
+    aboutLabel:     "// Sobre mí",
+    aboutTitle:     <>Una década en hypergrowth.<br />Una vida entre culturas.</>,
+    aboutBody:      "Pasé más de 10 años construyendo growth y operaciones comerciales dentro de TikTok, DiDi y Mercado Libre — empresas que escalaron cruzando idiomas, monedas y sistemas regulatorios que la mayoría de los playbooks nunca toca. Sumale una vida repartida entre Estados Unidos y Latinoamérica, y el resultado es una lectura poco común de cómo las empresas globales realmente se expanden. Ahora traigo esa misma experiencia operativa directo a las empresas listas para escalar bien — no con teoría, sino con los frameworks y sistemas que funcionaron adentro del hypergrowth.",
     sprintLabel:    "// Cómo trabajo contigo",
     sprintTitle:    <>Cómo trabajo<br />contigo.</>,
     s1label:        "// IA y Transformación",  s1title: "Transformación AI del Negocio",
@@ -262,6 +268,23 @@ export default function Portfolio() {
             </a>
             <span className="text-white/35 text-sm font-sans">{t.heroSubtitle}</span>
           </div>
+        </div>
+      </section>
+
+      {/* ══ 2. ABOUT ════════════════════════════════════════════════════ */}
+      <section className="py-16 md:py-24 px-6 md:px-10" style={{ background: "#000", borderTop: BORDER }}>
+        <div className="max-w-7xl mx-auto grid md:grid-cols-[1.1fr_1fr] gap-10 md:gap-16 items-start">
+          <div className="reveal">
+            <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-white/40 mb-5">{t.aboutLabel}</p>
+            <h2 className="font-display font-bold text-white leading-[0.95] tracking-[-0.03em]"
+                style={{ fontSize: "clamp(2.2rem,4.2vw,3.6rem)" }}>
+              {t.aboutTitle}
+            </h2>
+          </div>
+          <p className="reveal font-sans text-white/50 leading-relaxed"
+             style={{ fontSize: "clamp(0.95rem,1.15vw,1.05rem)" }}>
+            {t.aboutBody}
+          </p>
         </div>
       </section>
 
