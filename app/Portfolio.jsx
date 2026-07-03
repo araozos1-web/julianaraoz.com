@@ -5,6 +5,7 @@ import Lenis from "lenis"
 // ─── STATIC CONTENT ──────────────────────────────────────────────────────────
 
 const CTA = "https://calendly.com/jaraoz-mit/new-meeting"
+const EMAIL = "mailto:jaraoz@mit.edu"
 
 const CARDS = {
   en: [
@@ -64,19 +65,20 @@ const T = {
     workedWith:     "Built and operated inside",
     aboutLabel:     "// About",
     aboutTitle:     <>A decade inside hypergrowth.<br />A life between cultures.</>,
-    aboutBody:      "I've spent 10+ years building growth and commercial operations inside TikTok, DiDi, and Mercado Libre — companies that scaled across languages, currencies, and regulatory systems most playbooks never touch. Add a life split between the U.S. and Latin America, and the result is a rare read on how global businesses actually expand. Now I bring that same operating experience directly to companies ready to scale the right way — not with theory, but with the frameworks and systems that worked inside hypergrowth.",
+    aboutBody:      "10+ years building growth and commercial operations inside TikTok, DiDi, and Mercado Libre. Companies that scaled across languages, currencies, and regulations most playbooks never touch. I bring that same operating experience, and a life split between the U.S. and Latin America, to every company I work with.",
+    aboutEduLabel:  "Educated at",
     sprintLabel:    "// How I work with you",
     sprintTitle:    <>How I work<br />with you.</>,
     s1label:        "// AI Transformation",   s1title: "AI Business Transformation",
-    s1b:            ["→ AI workflow migration. Manual processes to automated pipelines.", "→ Cost reduction through automation. Outreach, sales ops, reporting, content.", "→ Tech stack deployment. The tools to run lean and fast."],
+    s1b:            ["→ AI workflow migration.", "→ Cost reduction through automation.", "→ Tech stack deployment."],
     s2label:        "// LatAm Expansion",     s2title: "LatAm Expansion & GTM",
-    s2b:            ["→ Market entry architecture. Where to start, who to partner with, what to localize.", "→ Channel and distribution design. Direct, B2B integrations, strategic alliances.", "→ The local operating playbook. Built from a decade inside the region."],
+    s2b:            ["→ Market entry architecture.", "→ Channel and distribution design.", "→ The local operating playbook."],
     s3label:        "// Growth",              s3title: "Fractional Head of Growth",
-    s3b:            ["→ Growth loops. Acquisition, referral programs, K-factor optimization.", "→ Loyalty and retention architecture. Cross-incentive design that keeps users coming back.", "→ Partnership and ecosystem programs. One-off deals into compounding revenue."],
+    s3b:            ["→ Growth loops.", "→ Loyalty and retention architecture.", "→ Partnership and ecosystem programs."],
     s4label:        "// Advisory",            s4title: "Advisory & Strategy",
-    s4b:            ["→ GTM and growth strategy sessions. Pressure-tested by someone who's operated, not just advised.", "→ AI readiness assessment. What to automate, what tools to use, where to start.", "→ Channel and partnership audits. What's working, what's leaking, what to build next."],
+    s4b:            ["→ GTM and growth strategy sessions.", "→ AI readiness assessment.", "→ Channel and partnership audits."],
     casesLabel:     "// Case studies",
-    casesTitle:     <>Deals I&apos;ve built.<br />Systems I&apos;ve deployed.</>,
+    casesTitle:     <>The Work.</>,
     metricsLabel:   "// By the numbers",
     metrics: [
       { n: "12x",  label: "Revenue Growth",      sub: "As fractional CGO for VC-backed startups" },
@@ -100,19 +102,20 @@ const T = {
     workedWith:     "Construido y operado dentro de",
     aboutLabel:     "// Sobre mí",
     aboutTitle:     <>Una década en hypergrowth.<br />Una vida entre culturas.</>,
-    aboutBody:      "Pasé más de 10 años construyendo growth y operaciones comerciales dentro de TikTok, DiDi y Mercado Libre — empresas que escalaron cruzando idiomas, monedas y sistemas regulatorios que la mayoría de los playbooks nunca toca. Sumale una vida repartida entre Estados Unidos y Latinoamérica, y el resultado es una lectura poco común de cómo las empresas globales realmente se expanden. Ahora traigo esa misma experiencia operativa directo a las empresas listas para escalar bien — no con teoría, sino con los frameworks y sistemas que funcionaron adentro del hypergrowth.",
+    aboutBody:      "Más de 10 años construyendo growth y operaciones comerciales dentro de TikTok, DiDi y Mercado Libre. Empresas que escalaron cruzando idiomas, monedas y regulaciones que la mayoría de los playbooks nunca toca. Traigo esa misma experiencia operativa, y una vida repartida entre Estados Unidos y Latinoamérica, a cada empresa con la que trabajo.",
+    aboutEduLabel:  "Formado en",
     sprintLabel:    "// Cómo trabajo contigo",
     sprintTitle:    <>Cómo trabajo<br />contigo.</>,
     s1label:        "// IA y Transformación",  s1title: "Transformación AI del Negocio",
-    s1b:            ["→ Migración de workflows a IA. Procesos manuales a pipelines automáticos.", "→ Reducción de costos por automatización. Outreach, sales ops, reportes, contenido.", "→ Despliegue de tech stack. Las herramientas para operar lean y rápido."],
+    s1b:            ["→ Migración de workflows a IA.", "→ Reducción de costos por automatización.", "→ Despliegue de tech stack."],
     s2label:        "// Expansión LatAm",      s2title: "Expansión LatAm & GTM",
-    s2b:            ["→ Arquitectura de entrada al mercado. Dónde arrancar, con quién aliarse, qué localizar.", "→ Diseño de canales y distribución. Directo, integraciones B2B, alianzas estratégicas.", "→ El playbook de operación local. Construido desde adentro de la región."],
+    s2b:            ["→ Arquitectura de entrada al mercado.", "→ Diseño de canales y distribución.", "→ El playbook de operación local."],
     s3label:        "// Growth",               s3title: "Head of Growth Fraccional",
-    s3b:            ["→ Growth loops. Adquisición, programas de referidos, optimización de K-factor.", "→ Arquitectura de lealtad y retención. Incentivos cruzados que mantienen usuarios.", "→ Programas de partnerships y ecosistemas. De deals aislados a revenue compuesto."],
+    s3b:            ["→ Growth loops.", "→ Arquitectura de lealtad y retención.", "→ Programas de partnerships y ecosistemas."],
     s4label:        "// Advisory",             s4title: "Advisory & Estrategia",
-    s4b:            ["→ Sesiones de estrategia GTM y growth. Probadas por alguien que operó, no solo asesoró.", "→ Diagnóstico de preparación para IA. Qué automatizar, qué herramientas, por dónde empezar.", "→ Auditorías de canales y partnerships. Qué funciona, qué pierde, qué construir a continuación."],
+    s4b:            ["→ Sesiones de estrategia GTM y growth.", "→ Diagnóstico de preparación para IA.", "→ Auditorías de canales y partnerships."],
     casesLabel:     "// Casos",
-    casesTitle:     <>Deals que armé.<br />Sistemas que desplegué.</>,
+    casesTitle:     <>El Trabajo.</>,
     metricsLabel:   "// Los números",
     metrics: [
       { n: "12x",  label: "Revenue Growth",         sub: "Como CGO fraccional para startups con VC" },
@@ -271,6 +274,46 @@ export default function Portfolio() {
         </div>
       </section>
 
+      {/* ══ 6. CASE STUDIES ═════════════════════════════════════════════ */}
+      <section id="cases" className="pt-16 md:pt-24 pb-10 overflow-hidden relative" style={{ background: "#000", borderTop: BORDER }}>
+        {/* ambient background video */}
+        <video autoPlay loop muted playsInline
+               className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none"
+               style={{ zIndex: 0 }}>
+          <source src="/didi.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 pointer-events-none" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.6) 100%)", zIndex: 1 }} />
+        <div className="reveal max-w-7xl mx-auto px-6 md:px-10 mb-14 relative" style={{ zIndex: 2 }}>
+          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-white/40 mb-5">{t.casesLabel}</p>
+          <h2 className="font-display font-bold text-white leading-[0.9] tracking-[-0.03em]"
+              style={{ fontSize: "clamp(3rem,7vw,8rem)" }}>
+            {t.casesTitle}
+          </h2>
+        </div>
+        <div id="carousel" className="flex gap-4 overflow-x-auto px-6 md:px-10 pb-6 select-none relative" style={{ zIndex: 2 }}>
+          {cards.map((c) => (
+            <article key={c.name} className="snap-item pcard ar45 shrink-0 w-[clamp(250px,78vw,340px)] rounded-2xl overflow-hidden relative"
+                     style={{ border: BORDER }}>
+              <div className="absolute inset-0 media-fallback" />
+              <img src={c.img} alt={c.name} loading="lazy" draggable="false"
+                   onError={(e) => (e.currentTarget.style.display = "none")}
+                   className={`pcard-media absolute inset-0 w-full h-full object-cover ${c.obj}`} />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/88 via-black/10 to-transparent" />
+              <div className="absolute bottom-5 left-5 right-5">
+                <span className="font-mono text-[9px] uppercase tracking-[0.18em]" style={{ color: "#10B981" }}>{c.tag}</span>
+                <h3 className="font-display font-semibold text-white mt-2"
+                    style={{ fontSize: "clamp(1rem,1.7vw,1.25rem)", lineHeight: 1.15, letterSpacing: "-0.02em" }}>
+                  {c.name}
+                </h3>
+                <p className="font-sans text-white/50 mt-1.5 leading-relaxed" style={{ fontSize: "clamp(0.75rem,0.85vw,0.82rem)" }}>
+                  {c.text}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
       {/* ══ 2. ABOUT ════════════════════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-6 md:px-10" style={{ background: "#000", borderTop: BORDER }}>
         <div className="max-w-7xl mx-auto grid md:grid-cols-[1.1fr_1fr] gap-10 md:gap-16 items-start">
@@ -281,10 +324,26 @@ export default function Portfolio() {
               {t.aboutTitle}
             </h2>
           </div>
-          <p className="reveal font-sans text-white/50 leading-relaxed"
-             style={{ fontSize: "clamp(0.95rem,1.15vw,1.05rem)" }}>
-            {t.aboutBody}
-          </p>
+          <div>
+            <p className="reveal font-sans text-white/50 leading-relaxed"
+               style={{ fontSize: "clamp(0.95rem,1.15vw,1.05rem)" }}>
+              {t.aboutBody}
+            </p>
+            <div className="reveal mt-10">
+              <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/30 mb-4">{t.aboutEduLabel}</p>
+              <div className="flex flex-wrap items-center gap-6">
+                {[
+                  { src: "/logos/mit-icon.png", alt: "MIT" },
+                  { src: "/logos/mit-sloan-logo.svg", alt: "MIT Sloan" },
+                  { src: "/logos/mit-medialab-logo.svg", alt: "MIT Media Lab" },
+                ].map((logo) => (
+                  <img key={logo.alt} src={logo.src} alt={logo.alt} draggable="false"
+                       style={{ height: "24px", width: "auto", maxWidth: "120px", objectFit: "contain",
+                                filter: "brightness(0) invert(1)", opacity: 0.5 }} />
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -356,45 +415,6 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* ══ 6. CASE STUDIES ═════════════════════════════════════════════ */}
-      <section id="cases" className="pt-16 md:pt-24 pb-10 overflow-hidden relative" style={{ background: "#000", borderTop: BORDER }}>
-        {/* ambient background video */}
-        <video autoPlay loop muted playsInline
-               className="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none"
-               style={{ zIndex: 0 }}>
-          <source src="/didi.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 pointer-events-none" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.6) 100%)", zIndex: 1 }} />
-        <div className="reveal max-w-7xl mx-auto px-6 md:px-10 mb-14 relative" style={{ zIndex: 2 }}>
-          <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-white/40 mb-5">{t.casesLabel}</p>
-          <h2 className="font-display font-bold text-white leading-[0.9] tracking-[-0.03em]"
-              style={{ fontSize: "clamp(3rem,7vw,8rem)" }}>
-            {t.casesTitle}
-          </h2>
-        </div>
-        <div id="carousel" className="flex gap-4 overflow-x-auto px-6 md:px-10 pb-6 select-none relative" style={{ zIndex: 2 }}>
-          {cards.map((c) => (
-            <article key={c.name} className="snap-item pcard ar45 shrink-0 w-[clamp(250px,78vw,340px)] rounded-2xl overflow-hidden relative"
-                     style={{ border: BORDER }}>
-              <div className="absolute inset-0 media-fallback" />
-              <img src={c.img} alt={c.name} loading="lazy" draggable="false"
-                   onError={(e) => (e.currentTarget.style.display = "none")}
-                   className={`pcard-media absolute inset-0 w-full h-full object-cover ${c.obj}`} />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/88 via-black/10 to-transparent" />
-              <div className="absolute bottom-5 left-5 right-5">
-                <span className="font-mono text-[9px] uppercase tracking-[0.18em]" style={{ color: "#10B981" }}>{c.tag}</span>
-                <h3 className="font-display font-semibold text-white mt-2"
-                    style={{ fontSize: "clamp(1rem,1.7vw,1.25rem)", lineHeight: 1.15, letterSpacing: "-0.02em" }}>
-                  {c.name}
-                </h3>
-                <p className="font-sans text-white/50 mt-1.5 leading-relaxed" style={{ fontSize: "clamp(0.75rem,0.85vw,0.82rem)" }}>
-                  {c.text}
-                </p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
 
       {/* ══ 8. FAQ ══════════════════════════════════════════════════════ */}
       <section className="py-16 md:py-24 px-6 md:px-10" style={{ background: "#000", borderTop: BORDER }}>
@@ -446,6 +466,11 @@ export default function Portfolio() {
                style={{ border: "1px solid rgba(0,0,0,0.2)" }}>
               WhatsApp
             </a>
+            <a href={EMAIL}
+               className="inline-flex items-center justify-center px-8 py-4 rounded-full font-sans font-semibold text-sm text-black transition-colors"
+               style={{ border: "1px solid rgba(0,0,0,0.2)" }}>
+              Email
+            </a>
           </div>
         </div>
       </section>
@@ -455,6 +480,12 @@ export default function Portfolio() {
         <footer className="max-w-7xl mx-auto py-10 flex flex-col md:flex-row justify-between items-center gap-6">
           <span className="font-sans text-white/40 text-xs tracking-wide">{t.footerCopy}</span>
           <div className="flex items-center gap-3">
+            <a href={EMAIL}
+               className="flex items-center gap-2 rounded-full px-5 py-2.5 font-sans text-sm font-medium text-white/35 hover:text-white/60 transition-colors"
+               style={{ border: BORDER }}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-3.5 h-3.5"><path d="M4 4h16v16H4z" opacity="0"/><path d="M3 6l9 7 9-7M3 6v12h18V6H3z"/></svg>
+              Email
+            </a>
             <a href="https://wa.me/16173667447" target="_blank" rel="noreferrer"
                className="flex items-center gap-2 rounded-full px-5 py-2.5 font-sans text-sm font-medium text-white/35 hover:text-white/60 transition-colors"
                style={{ border: BORDER }}>
